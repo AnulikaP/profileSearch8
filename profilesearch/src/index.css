@@ -4,7 +4,7 @@
   padding: 0;
 }
 .wrapper{ 
-  min-height: 600px;
+  max-width: 100%;
   width: 70%;
   margin: auto;
   background: rgb(221,191,52);
@@ -15,15 +15,17 @@
 .container ul{
   display:grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: auto;
+  justify-content: center;
+  margin: 0 auto;
   width: 90%;
 }
 .profile{
   display: flex;
   flex-direction: row;
-  margin: 5px;
+  margin: 10px;
   background-color: white;
   padding: 10px;  
+  width: 70%;
 }
 .input{
   display: flex;
@@ -51,11 +53,39 @@
   .profile{
     width: 200px;
   }
+  .wrapper{
+    width: 300px;
+  }
   .title p{
      font-size: 7px;
      font-weight: 500;
   }
   
 }
+@media (max-width: 425px) {
+  .container ul{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .profile{
+    width: 300px;
+  }
+  .wrapper{
+    width: 380px;
+  }
 
+  .title p{
+     font-size: 7px;
+     font-weight: 500;
+  } 
+ 
+}
+@media (max-width: 768px) {
+  .title p{
+    font-size: 10px;
+    font-weight: 500;
+}
+.profile{
+  width: 250px;
+}
 
+}
